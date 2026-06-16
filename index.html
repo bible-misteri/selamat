@@ -1,0 +1,260 @@
+<style>
+
+body{
+margin:0;
+padding:0;
+background:#050b17;
+color:#e8e8e8;
+font-family:Georgia,serif;
+line-height:1.8;
+text-align:center;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:40px 20px;
+}
+
+h1{
+color:#d4af37;
+font-size:52px;
+margin-top:40px;
+margin-bottom:15px;
+}
+
+.subtitle{
+color:#8bbcff;
+font-size:20px;
+font-style:italic;
+margin-bottom:40px;
+}
+
+.card{
+background:#071526;
+padding:30px;
+margin:30px auto;
+border-radius:18px;
+border:1px solid rgba(212,175,55,.25);
+max-width:720px;
+box-shadow:0 0 20px rgba(0,0,0,.25);
+}
+
+.note{
+font-size:18px;
+line-height:1.9;
+}
+
+.button{
+display:inline-block;
+background:#d4af37;
+color:#000;
+padding:14px 28px;
+margin:10px;
+border-radius:10px;
+font-weight:bold;
+text-decoration:none;
+cursor:pointer;
+border:none;
+font-size:16px;
+}
+
+.button:hover{
+opacity:.9;
+}
+
+.qris-img{
+width:100%;
+max-width:320px;
+border-radius:12px;
+margin:20px auto;
+display:block;
+}
+
+input{
+padding:12px;
+width:80%;
+max-width:320px;
+border-radius:8px;
+border:none;
+font-size:16px;
+text-align:center;
+}
+
+.footer{
+margin-top:80px;
+padding:40px 20px;
+color:#777;
+font-size:14px;
+}
+
+#error{
+margin-top:15px;
+color:#ffb3b3;
+font-weight:bold;
+}
+
+h2{
+color:#d4af37;
+}
+
+</style>
+
+<body>
+
+<div class="container">
+
+<h1> PENJAGA DOMUS ISAACI</h1>
+
+<p class="subtitle">
+
+Gerbang menuju ruang yang lebih dalam.
+
+</p>
+
+<div class="card">
+
+<p class="note">
+
+Selamat datang di Gerbang Penjaga Rumah.
+
+<br><br>
+
+Jika Anda berada di halaman ini,
+berarti Anda telah menerima kunci akses
+untuk memasuki bagian dalam DOMUS ISAACI.
+
+<br><br>
+
+Di balik gerbang ini tersimpan:
+
+<br><br>
+
+ Jurnal Penelitian
+
+<br>
+
+ Artefak Lanjutan
+
+<br>
+
+ Perpustakaan Khusus
+
+<br>
+
+ Audio dan Catatan Penjelajahan
+
+<br><br>
+
+Tidak semua ruangan dibuka untuk umum.
+
+Namun sebagian penjelajah memilih ikut menjaga lampu Rumah tetap menyala.
+
+Karena itu mereka disebut:
+
+<br><br>
+
+<b>Penjaga Rumah.</b>
+
+</p>
+
+</div>
+
+<a class="button" href="#" onclick="showLogin()">
+
+ Masuk Gerbang Penjaga
+
+</a>
+
+<div id="login" class="card" style="display:none;">
+
+<h2> Verifikasi Kunci</h2>
+
+<p>
+
+Masukkan kata kunci yang telah diberikan.
+
+</p>
+
+<input
+type="password"
+id="password"
+placeholder="Masukkan password">
+
+<br><br>
+
+<button
+class="button"
+onclick="checkPassword()">
+
+Masuk
+
+</button>
+
+<p id="error"></p>
+
+</div>
+
+<div class="quote">
+
+Mungkin suatu hari seluruh Rumah akan terbuka.
+
+Tetapi hari itu belum tiba.
+
+<br><br>
+
+Untuk saat ini,
+kita masih berjalan dari artefak ke artefak,
+dari ruangan ke ruangan,
+dan dari pertanyaan ke pertanyaan.
+
+<br><br>
+
+Terima kasih telah menjadi bagian dari penjelajahan ini.
+
+</div>
+
+<div class="footer">
+
+DOMUS ISAACI
+
+<br><br>
+
+ Penjaga Rumah
+
+<br><br>
+
+Karena Penjelajahan Belum Selesai
+
+</div>
+
+</div>
+
+<script>
+
+function showLogin(){
+document.getElementById("login").style.display="block";
+}
+
+function checkPassword(){
+
+const pass =
+document.getElementById("password").value;
+
+if(pass === "DOMUS2026"){
+
+window.location.href =
+"https://ebook.norman-sandhi.workers.dev/";
+
+}else{
+
+document.getElementById("error").innerHTML =
+" Kunci tidak dikenali.";
+
+}
+
+}
+
+</script>
+
+</body>
